@@ -1,0 +1,1 @@
+0 * * * * s6-setuidgid abc php7 -f /config/www/miniflux/cronjob.php
