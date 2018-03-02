@@ -1,4 +1,4 @@
-# saghul/miniflux
+# rigelk/miniflux
 [Miniflux](https://miniflux.net/) is an open source web-based news feed (RSS/Atom) reader and aggregator.
 Miniflux is not for everyone, it's for people who want to read their feeds efficiently.
 
@@ -12,7 +12,7 @@ docker create \
 -e PGID=<gid> -e PUID=<uid> \
 -e TZ=<timezone> \
 -p 80:80 \
-saghul/miniflux
+rigelk/miniflux
 ```
 
 ## Parameters
@@ -25,7 +25,7 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 
 * `-p 80` - webui port *see note below*
 * `-v /etc/localtime` for timesync - *optional* *omit if using TZ variable*
-* `-v /config` - where miniflux should store it's config and data files
+* `-v /config` - where miniflux should store its config and data files
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 * `-e TZ` for setting timezone information, eg Europe/London
@@ -55,5 +55,4 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 ## Thanks
 
-This template is based off [the tt-rss template](https://github.com/linuxserver/docker-tt-rss) by [LinuxServer](https://www.linuxserver.io/). Cheers!
-
+This template is based off [the tt-rss template](https://github.com/linuxserver/docker-tt-rss) by [LinuxServer](https://www.linuxserver.io/). Cheers! (but don't use tt-rss)
