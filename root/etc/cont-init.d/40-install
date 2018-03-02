@@ -4,7 +4,7 @@
 if [ ! -d /config/www/miniflux ]; then
     mkdir -p /config/www
     echo "fetching miniflux files, this may take a little while"
-    curl -o /tmp/miniflux.zip -L https://miniflux.net/miniflux-latest.zip
+    wget https://github.com/$(wget https://github.com/miniflux/miniflux/releases/latest -q -O - | egrep '/.*/.*/.*zip' -o) -q -O /tmp/miniflux.zip
     unzip /tmp/miniflux.zip -d /config/www/
     rm /tmp/miniflux.zip
 fi

@@ -1,8 +1,7 @@
-FROM lsiobase/alpine.nginx:3.6
-MAINTAINER saghul
+FROM lsiobase/alpine.nginx:3.7
+MAINTAINER rigelk
 
 # NOTE: this is not an official LinuxServer.io build.
-
 
 # install packages
 RUN \
@@ -19,7 +18,7 @@ RUN \
 	php7-pdo_sqlite \
 	php7-session \
 	php7-xml \
-	unzip
+  unzip
 
 # copy local files
 COPY root/ /
