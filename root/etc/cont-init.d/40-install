@@ -6,6 +6,7 @@ if [ ! -d /config/www/miniflux ]; then
     echo "fetching miniflux files, this may take a little while"
     wget https://github.com/$(wget https://github.com/miniflux/miniflux/releases/latest -q -O - | egrep '/.*/.*/.*zip' -o) -q -O /tmp/miniflux.zip
     unzip /tmp/miniflux.zip -d /config/www/
+    mv /config/www/miniflux-* /config/www/miniflux
     rm /tmp/miniflux.zip
 fi
 
